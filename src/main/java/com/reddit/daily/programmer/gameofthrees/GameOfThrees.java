@@ -1,5 +1,6 @@
 package com.reddit.daily.programmer.gameofthrees;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -8,16 +9,13 @@ import java.util.Scanner;
  * @author axel
  */
 public class GameOfThrees {
-
     public static void main(String[] args) {
         System.out.println("Enter a number: ");
-        Integer input = new Scanner(System.in).nextInt();
+        Integer n = new Scanner(System.in).nextInt();
 
-        while (input > 1) {
-            Integer n = input % 3 == 0 ? 0 : input % 3 == 1 ? -1 : 1;
-            System.out.println(input + " " + n);
-            input = (input + n) / 3;
+        while (n > 1) {
+            n = Arrays.asList(n, n + 1, n - 1).stream().filter(nb -> nb % 3 == 0).findFirst().map(nb -> nb / 3).get();
+            System.out.println(n);
         }
-        System.out.println(input);
     }
 }
