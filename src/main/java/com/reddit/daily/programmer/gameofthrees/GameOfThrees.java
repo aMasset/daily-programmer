@@ -15,7 +15,10 @@ public class GameOfThrees {
 
         while (n > 1) {
             final Integer f = n;
-            n = Arrays.asList(n, n + 1, n - 1).stream().filter(nb -> nb % 3 == 0).peek(nb -> System.out.println(f + " " + (nb - f))).findFirst().map(nb -> nb / 3).get();
+            n = Arrays.asList(n, n + 1, n - 1).stream()
+                    .filter(nb -> nb % 3 == 0)
+                    .peek(nb -> System.out.println(f + " " + (nb - f)))
+                    .findFirst().map(nb -> nb / 3).get();
         }
         System.out.println(n);
     }
