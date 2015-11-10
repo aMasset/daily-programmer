@@ -1,4 +1,4 @@
-package com.reddit.daily.tests;
+package com.reddit.daily.programmer.tests;
 
 import java.util.Arrays;
 import java.util.List;
