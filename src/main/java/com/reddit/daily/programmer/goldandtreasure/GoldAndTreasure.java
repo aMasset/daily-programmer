@@ -1,4 +1,4 @@
-package com.reddit.daily.programmer;
+package com.reddit.daily.programmer.goldandtreasure;
 
 import java.util.Arrays;
 import java.util.List;
